@@ -12,7 +12,7 @@ function App() {
   };
 
   const removeTodo = (id) => {
-    const prevTodo = { ...todos };
+    const prevTodo = [...todos];
     const newTodos = prevTodo.filter((todo) => id != todo.id);
     setTodos(newTodos);
   };
@@ -31,7 +31,12 @@ function App() {
       </div>
 
       {todos.map(({ id, todo }) => {
-        return <div key={id}>{todo}</div>;
+        return (
+          <div key={id}>
+            <span>{todo}</span>
+            <span onClick={() => removeTodo(id)}>X</span>
+          </div>
+        );
       })}
     </div>
   );
