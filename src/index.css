@@ -36,3 +36,17 @@ input {
 input:focus {
   outline: none;
 }
+
+.todo-wrapper {
+  width: 200px;
+  margin: 10px 0 10px 0;
+  padding: 5px 20px 5px 20px;
+  background-color: rgb(240, 240, 240);
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.remove-wrapper {
+  cursor: pointer;
+}

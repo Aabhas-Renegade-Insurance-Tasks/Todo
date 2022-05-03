@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 function App() {
   const [state, setState] = useState("");
@@ -32,9 +33,11 @@ function App() {
 
       {todos.map(({ id, todo }) => {
         return (
-          <div key={id}>
+          <div key={id} className="todo-wrapper">
             <span>{todo}</span>
-            <span onClick={() => removeTodo(id)}>X</span>
+            <span className="remove-wrapper" onClick={() => removeTodo(id)}>
+              <i className="bi bi-x-circle"></i>
+            </span>
           </div>
         );
       })}
