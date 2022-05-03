@@ -38,6 +38,8 @@ function App() {
           </div>
         );
       })}
+
+      <button onClick={() => setTodos([])}>Reset</button>
     </div>
   );
 }
